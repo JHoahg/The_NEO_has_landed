@@ -45,8 +45,8 @@ while deleting\
 - Use the documentation at [https://docs.qmk.fm/](https://docs.qmk.fm/) to set up your environment for building your firmware.\
 - Build your layout against [https://github.com/zsa/qmk_firmware/](https://github.com/zsa/qmk_firmware/) which is our QMK fork (instead of qmk/qmk_firmware).
 
-[1] https://www.neo-layout.org, https://git.neo-layout.org/neo/neo-layout\
-[2] https://www.zsa.io/moonlander/\
-[3] https://configure.zsa.io/moonlander/search\
-[4] https://github.com/samhocevar/wincompose\
+[1] https://www.neo-layout.org, https://git.neo-layout.org/neo/neo-layout \
+[2] https://www.zsa.io/moonlander/ \
+[3] https://configure.zsa.io/moonlander/search \
+[4] https://github.com/samhocevar/wincompose \
 [5] https://github.com/clarkm/dupepad
