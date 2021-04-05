@@ -7,12 +7,12 @@ This layout has been inspired by other peoples work [3]:
 • Ultimate functional Neo2 by relbeoh\
 • Neo2 Inspiration by dlmsr\
 • neo2 Linux & Mac (German) by prefectAtEarth\
-• neo2-us by wlard\
+• neo2-us by wlard
 
 # Featuring:
 • Multi OS Support for Unicode characters (see FN layer)\
 • command/ctrl - key switch to switch e.g. from CTRL + C to CMD + C (see FN layer)\
-• Full implementation of  Neo layer 5 and 6\
+• Full implementation of  Neo layer 5 and 6
 
 # How to:
 Download the binary or compile the layout from source, than flash with Wally (other flashing utilities haven't been tested).
@@ -38,15 +38,15 @@ Have Phun.
 • figure out gaming layers\
 • macro key sendinge "sudo rm -rf ." and play the imperial march\
 while deleting
-• implent a frog pad layer [5] :D or a neo frogpad...\
+• implent a frog pad layer [5] :D or a neo frogpad...
 
 
 # Documentation
 - Use the documentation at [https://docs.qmk.fm/](https://docs.qmk.fm/) to set up your environment for building your firmware.\
-- Build your layout against [https://github.com/zsa/qmk_firmware/](https://github.com/zsa/qmk_firmware/) which is our QMK fork (instead of qmk/qmk_firmware).\
+- Build your layout against [https://github.com/zsa/qmk_firmware/](https://github.com/zsa/qmk_firmware/) which is our QMK fork (instead of qmk/qmk_firmware).
 
 [1] https://www.neo-layout.org, https://git.neo-layout.org/neo/neo-layout\
 [2] https://www.zsa.io/moonlander/\
 [3] https://configure.zsa.io/moonlander/search\
 [4] https://github.com/samhocevar/wincompose\
-[5] https://github.com/clarkm/dupepad\
+[5] https://github.com/clarkm/dupepad
