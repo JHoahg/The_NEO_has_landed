@@ -1,7 +1,7 @@
 # The_NEO_has_landed
 # A cross OS implementation of the NEO keboard layout[1] for the Moonlander Mk I[2]
 
-This layout has been inspired by other peoples work [3]:\
+This layout has been inspired by other people's work [3]:\
 • My Neo2 by eikek \
 • Neo2 - normal by magnum\
 • Ultimate functional Neo2 by relbeoh\
