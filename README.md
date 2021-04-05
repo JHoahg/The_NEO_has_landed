@@ -1,9 +1,7 @@
 # The_NEO_has_landed
 # A cross OS implementation of the NEO keboard layout[1] for the Moonlander Mk I[2]
 
-<div style="padding-top: 60%; position: relative;">
-	<iframe src="https://configure.zsa.io/embed/moonlander/layouts/pbrEb/p6zML/0" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%"></iframe>
-</div>
+https://configure.zsa.io/embed/moonlander/layouts/pbrEb/p6zML/0
 
 This layout has been inspired by other people's work [3]:\
 • My Neo2 by eikek \
