@@ -29,8 +29,16 @@ Of course you can add a MO modifier to reach this layer, but if you look at othe
 There are more tap dances hidden on layer 1: on x v c a z. Single tap sends the character, hold gives the shifted version and double tap triggers the CTRL/CMD + letter action.
 The CTRL/CMD mode is toggled on the FN layer with the »CtrlTog« key in the outer left column. Hitting the key will send a string with the activated mode(MacOS or Lnx).
 On layer 5 and 6 you'll find all the symbols we love Neo for. Depending on your OS you have to change the unicode mode of the keyboard. This can be achieved via the three unicode mode keys (from top to bottom: Mac,Linux,Win) on the far right of the FN-layer.
+I wanted a proper arrow key alignment so I switched J and Up-arrow. So far I like it that way.
+For the layers 7 and 8, I havent tested these really in game, so there will be probably changes. But I guess a „clean“ layer for gaming would be nice.
 If you have ideas or find bugs, drop me a line.
 Have Phun.
+
+# ToDo:
+• figure out gaming layers
+• macro key sendinge "sudo rm -rf ." and play the imperial march
+while deleting
+• implent a frog pad layer [5] :D or a neo frogpad...
 
 
 # Documentation
@@ -41,3 +49,4 @@ Have Phun.
 [2] https://www.zsa.io/moonlander/
 [3] https://configure.zsa.io/moonlander/search
 [4] https://github.com/samhocevar/wincompose
+[5] https://github.com/clarkm/dupepad
