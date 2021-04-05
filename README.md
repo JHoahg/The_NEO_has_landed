@@ -36,8 +36,8 @@ Have Phun.
 
 # ToDo:
 • figure out gaming layers\
-• macro key sendinge "sudo rm -rf ." and play the imperial march\
-while deleting
+• macro key sendinge "sudo rm -rf ." and play the imperial march
+while deleting\
 • implent a frog pad layer [5] :D or a neo frogpad...
 
 
