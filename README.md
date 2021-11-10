@@ -1,4 +1,4 @@
-# The_NEO_has_landed – A cross OS implementation of the NEO keboard layout[1] for the Moonlander Mk I[2]
+# The_NEO_has_landed – A cross OS implementation of the NEO keyboard layout[1] for the Moonlander Mk I[2]
 
 https://configure.zsa.io/moonlander/layouts/pbrEb/latest/0
 
