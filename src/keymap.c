@@ -1,30 +1,30 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 #include "keymap_german.h"
-#include "keymap_nordic.h"
-#include "keymap_french.h"
-#include "keymap_spanish.h"
-#include "keymap_hungarian.h"
-#include "keymap_swedish.h"
-#include "keymap_br_abnt2.h"
-#include "keymap_canadian_multilingual.h"
-#include "keymap_german_ch.h"
-#include "keymap_jp.h"
-#include "keymap_korean.h"
-#include "keymap_bepo.h"
-#include "keymap_italian.h"
-#include "keymap_slovenian.h"
-#include "keymap_lithuanian_azerty.h"
-#include "keymap_danish.h"
-#include "keymap_norwegian.h"
-#include "keymap_portuguese.h"
-#include "keymap_contributions.h"
-#include "keymap_czech.h"
-#include "keymap_romanian.h"
-#include "keymap_russian.h"
-#include "keymap_uk.h"
-#include "keymap_estonian.h"
-#include "keymap_belgian.h"
+// #include "keymap_nordic.h"
+// #include "keymap_french.h"
+// #include "keymap_spanish.h"
+// #include "keymap_hungarian.h"
+// #include "keymap_swedish.h"
+// #include "keymap_br_abnt2.h"
+// #include "keymap_canadian_multilingual.h"
+// #include "keymap_german_ch.h"
+// #include "keymap_jp.h"
+// #include "keymap_korean.h"
+// #include "keymap_bepo.h"
+// #include "keymap_italian.h"
+// #include "keymap_slovenian.h"
+// #include "keymap_lithuanian_azerty.h"
+// #include "keymap_danish.h"
+// #include "keymap_norwegian.h"
+// #include "keymap_portuguese.h"
+// #include "keymap_contributions.h"
+// #include "keymap_czech.h"
+// #include "keymap_romanian.h"
+// #include "keymap_russian.h"
+// #include "keymap_uk.h"
+// #include "keymap_estonian.h"
+// #include "keymap_belgian.h"
 #include "keymap_us_international.h"
 #include "song_list.h"
 
@@ -168,14 +168,14 @@ enum tap_dance_codes {
 	DANCE_LB_MO3, //left brackets [{ on single/doubele tap MO3 on hold
 	DANCE_RB_MO4, //right brackets ]} on single/doubele tap MO4 on hold
 };
-//qmk compile --keyboard moonlander -km JHoahg -j8
+//qmk compile --keyboard moonlander -km JHoahg -j 8
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
-    KC_TRANSPARENT, TD(DANCE_1),    TD(DANCE_2),    TD(DANCE_3),    TD(DANCE_4),    TD(DANCE_5),    KC_TRANSPARENT,  TD(DANCE_11),   TD(DANCE_12),   TD(DANCE_13),   TD(DANCE_14),   TD(DANCE_15),   TD(DANCE_16),   KC_BSPACE,
-    TD(DANCE_0),    KC_X,           KC_V,           KC_L,           KC_C,           KC_W,           KC_HYPR,         KC_TRANSPARENT, KC_K,           KC_H,           KC_G,           KC_F,           KC_Q,           NE_SS,
+    TD(DANCE_0),    TD(DANCE_1),    TD(DANCE_2),    TD(DANCE_3),    TD(DANCE_4),    TD(DANCE_5),    KC_TRANSPARENT,  TD(DANCE_11),   TD(DANCE_12),   TD(DANCE_13),   TD(DANCE_14),   TD(DANCE_15),   TD(DANCE_16),   KC_BSPACE,
+    MO(6),          KC_X,           KC_V,           KC_L,           KC_C,           KC_W,           KC_HYPR,         KC_TRANSPARENT, KC_K,           KC_H,           KC_G,           KC_F,           KC_Q,           NE_SS,
     MO(2),          KC_U,           KC_I,           KC_A,           KC_E,           KC_O,           KC_MEH,          MO(2),          KC_S,           KC_N,           KC_R,           KC_T,           KC_D,           KC_Y,
-    LSFT_T(KC_ESCAPE),TD(DANCE_NE_UE),TD(DANCE_NE_OE),TD(DANCE_NE_AE),KC_P,         KC_Z,                                            KC_B,           KC_M,           TD(DANCE_17),   TD(DANCE_18),   KC_UP,          KC_J,
-    MO(6),          LGUI(LSFT(KC_LALT)),KC_LALT,    KC_LGUI,        LCTL_T(KC_TAB), MO(5),                                           KC_RSPC,        KC_RGUI,        KC_TRANSPARENT, KC_LEFT,        KC_DOWN,        KC_RIGHT,
+    LSFT_T(KC_TAB), TD(DANCE_NE_UE),TD(DANCE_NE_OE),TD(DANCE_NE_AE),KC_P,           KC_Z,                                            KC_B,           KC_M,           TD(DANCE_17),   TD(DANCE_18),   KC_UP,          KC_J,
+		SH_MON,         LGUI(LSFT(KC_LALT)),KC_LALT,    KC_LGUI,        KC_LCTL,        MO(5),                                           KC_RSPC,        KC_RGUI,        KC_TRANSPARENT, KC_LEFT,        KC_DOWN,        KC_RIGHT,
                                                     KC_SPACE,       KC_LSPO,        LT(3, KC_LBRACKET),                              LT(4, KC_RBRACKET), RCTL_T(KC_ENTER), KC_BSPACE
   ),
 	[1] = LAYOUT_moonlander( //QWERTZ
@@ -236,7 +236,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                     KC_SPACE,       KC_LSPO,        LT(3, KC_LBRACKET),                              LT(4, KC_RBRACKET), RCTL_T(KC_ENTER), KC_BSPACE
   ),
   [8] = LAYOUT_moonlander(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    TO(0),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
@@ -244,7 +244,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [9] = LAYOUT_moonlander(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    TO(0),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,

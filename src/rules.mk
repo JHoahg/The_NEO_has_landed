@@ -7,4 +7,5 @@ WEBUSB_ENABLE = yes
 ORYX_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 UNICODE_ENABLE = yes
+SWAP_HANDS_ENABLE = yes
 SRC = matrix.c
