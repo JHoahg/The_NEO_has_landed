@@ -440,7 +440,7 @@ void rgb_matrix_indicators_user(void) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 				case (KC_U):
-        		return TAPPING_TERM + 70;
+                        return TAPPING_TERM + 70;
 				case (KC_Y):
 						return TAPPING_TERM + 50;
         default:
@@ -460,202 +460,198 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case NE_UE:
-    if (record->event.pressed) {
-			unregister_code16(NE_UE);
-			send_unicode_string("ü");
-    }
-    break;
+        if (record->event.pressed) {
+            unregister_code16(NE_UE);
+            send_unicode_string("ü");
+        }
+        break;
     case S(NE_UE):
-    if (record->event.pressed) {
-			unregister_code16(LSFT_NE_UE);
-      send_unicode_string("Ü");
-    }
-    break;
-		case NE_OE:
+        if (record->event.pressed) {
+            unregister_code16(LSFT_NE_UE);
+            send_unicode_string("Ü");
+        }
+        break;
+	case NE_OE:
 		if (record->event.pressed) {
 			send_unicode_string("ö");
 		}
 		break;
-		case S(NE_OE) :
-    if (record->event.pressed) {
-      send_unicode_string("Ö");
-    }
-    break;
-
-		case NE_AE:
-    if (record->event.pressed) {
-      send_unicode_string("ä");
-    }
-    break;
-
-		case LSFT_NE_AE:
-    if (record->event.pressed) {
-      send_unicode_string("Ä");
-    }
-    break;
-
-		case NE_SS:
+	case S(NE_OE) :
+        if (record->event.pressed) {
+        send_unicode_string("Ö");
+        }
+        break;
+	case NE_AE:
+        if (record->event.pressed) {
+            send_unicode_string("ä");
+        }
+        break;
+	case LSFT_NE_AE:
+        if (record->event.pressed) {
+        send_unicode_string("Ä");
+        }
+        break;
+	case NE_SS:
 		if (record->event.pressed) {
 			send_unicode_string("ß");
-
 		}
 		break;
-
-		case LSFT_NE_SS:
+	case LSFT_NE_SS:
 		if (record->event.pressed) {
 			send_unicode_string("ẞ");
-
 		}
 		break;
-		//SUC(NE_°,"°")//layer 2 start
-		//SUC(NE_§,"§")
-		SUC(NE_SCRIPT_L, "ℓ")
-		SUC(NE_LEFT_GUILLEMET, "»")
-		SUC(NE_RIGHT_GUILLEMET,"«")
-		SUC(NE_DOLLAR,"$")
-		SUC(NE_EURO,"€")
-		SUC(NE_LOW_QUOTE, "„")
-		SUC(NE_DOUBLE_QUOTE, "“")
-		SUC(NE_RIGHT_DOUBLE_QUOTE, "”")
-		SUC(NE_CEDILLE, "¸")
-		SUC(NE_EM_DASH, "—")
-		SUC(NE_EN_DASH,"–")
-		SUC(NE_BULLET, "•")//layer 2 end
-		SUC(NE_SUP_ONE,"¹")//layer 3 start
-		SUC(NE_SUP_TWO,"²")
-		SUC(NE_SUP_THREE,"³")
-		SUC(NE_SNG_ANG_QUOT, "›")
-		SUC(NE_SNG_ANG_QUOT_RI, "‹")
-		SUC(NE_CENT, "¢")
-		SUC(NE_YEN, "¥")
-		SUC(NE_SNG_LOW_QUOT, "‚")
-		SUC(NE_SNG_QUOT_LE, "‘")
-		SUC(NE_SNG_QUOT_RI, "’")
-		SUC(NE_ELLIPSIS, "…")
-		SUC(NE_RING_ABOVE, "˚")
-		SUC(NE_LONG_S,"ſ")//layer 3 end
-		SUC(NE_FEMALE_ORD,"ª")//layer 4 start
-		SUC(NE_MALE_ORD,"º")
-		SUC(NE_NUMERO,"№")
-		SUC(NE_MID_DOT, "·")
-		SUC(NE_POUND, "£")
-		SUC(NE_CURRENCY, "¤")
-		SUC(NE_TREMA,"¨")//layer 4 end
-		SUC(LOWER_ONE,"₁")//layer 5 end
-		SUC(LOWER_TWO,"₂")
-		SUC(LOWER_THREE  ,"₃")
-		SUC(NE_FEM  ,"♀")
-		SUC(NE_MAL  ,"♂")
-		SUC(NE_HERM  ,"⚥")
-		SUC(NE_VARKAPPA,"ϰ")
-		SUC(MTH_LANGLE,"⟨")
-		SUC(MTH_RANGLE,"⟩")
-		SUC(LOWER_ZERO,"₀")
-		SUC(NE_NON_BRK_HYPHEN,"‑")
-		SUC(NE_XI, "ξ")
-		SUC(NE_LAMB,"λ")
-		SUC(NE_CHI,"χ")
-		SUC(NE_OMEG,"ω")
-		SUC(NE_KAPP,"κ")
-		SUC(NE_PSI,"ψ")
-		SUC(NE_GAMM,"γ")
-		SUC(NE_PHI2,"ϕ")
-		SUC(NE_PHI,"φ")
-		SUC(NE_SIGMA2,"ς")
-		SUC(NE_IOTA,"ι")
-		SUC(NE_ALPH, "α")
+	//SUC(NE_°,"°")//layer 2 start
+	//SUC(NE_§,"§")
+	SUC(NE_SCRIPT_L, "ℓ")
+	SUC(NE_LEFT_GUILLEMET, "»")
+	SUC(NE_RIGHT_GUILLEMET,"«")
+	SUC(NE_DOLLAR,"$")
+	SUC(NE_EURO,"€")
+	SUC(NE_LOW_QUOTE, "„")
+	SUC(NE_DOUBLE_QUOTE, "“")
+	SUC(NE_RIGHT_DOUBLE_QUOTE, "”")
+	SUC(NE_CEDILLE, "¸")
+	SUC(NE_EM_DASH, "—")
+	SUC(NE_EN_DASH,"–")
+	SUC(NE_BULLET, "•")//layer 2 end
+	SUC(NE_SUP_ONE,"¹")//layer 3 start
+	SUC(NE_SUP_TWO,"²")
+	SUC(NE_SUP_THREE,"³")
+	SUC(NE_SNG_ANG_QUOT, "›")
+	SUC(NE_SNG_ANG_QUOT_RI, "‹")
+	SUC(NE_CENT, "¢")
+	SUC(NE_YEN, "¥")
+	SUC(NE_SNG_LOW_QUOT, "‚")
+	SUC(NE_SNG_QUOT_LE, "‘")
+	SUC(NE_SNG_QUOT_RI, "’")
+	SUC(NE_ELLIPSIS, "…")
+	SUC(NE_RING_ABOVE, "˚")
+	SUC(NE_LONG_S,"ſ")//layer 3 end
+	SUC(NE_FEMALE_ORD,"ª")//layer 4 start
+	SUC(NE_MALE_ORD,"º")
+	SUC(NE_NUMERO,"№")
+	SUC(NE_MID_DOT, "·")
+	SUC(NE_POUND, "£")
+	SUC(NE_CURRENCY, "¤")
+	SUC(NE_TREMA,"¨")//layer 4 end
+	SUC(LOWER_ONE,"₁")//layer 5 end
+	SUC(LOWER_TWO,"₂")
+	SUC(LOWER_THREE  ,"₃")
+	SUC(NE_FEM  ,"♀")
+	SUC(NE_MAL  ,"♂")
+	SUC(NE_HERM  ,"⚥")
+	SUC(NE_VARKAPPA,"ϰ")
+	SUC(MTH_LANGLE,"⟨")
+	SUC(MTH_RANGLE,"⟩")
+	SUC(LOWER_ZERO,"₀")
+	SUC(NE_NON_BRK_HYPHEN,"‑")
+	SUC(NE_XI, "ξ")
+	SUC(NE_LAMB,"λ")
+	SUC(NE_CHI,"χ")
+	SUC(NE_OMEG,"ω")
+	SUC(NE_KAPP,"κ")
+	SUC(NE_PSI,"ψ")
+	SUC(NE_GAMM,"γ")
+	SUC(NE_PHI2,"ϕ")
+	SUC(NE_PHI,"φ")
+	SUC(NE_SIGMA2,"ς")
+	SUC(NE_IOTA,"ι")
+	SUC(NE_ALPH, "α")
     SUC(NE_EPSL,"ε")
-		SUC(NE_OMCR,"ο")
-		SUC(NE_SIGM,"σ")
-		SUC(NE_NU,"ν")
-		SUC(NE_RHO,"ρ")
-		SUC(NE_TAU,"τ")
-		SUC(NE_DELT,"δ")
-		SUC(NE_NU2,"υ")
-		SUC(NE_EPSL2,"")
-		SUC(NE_ETA,"η")
-		SUC(NE_PI,"π")
-		SUC(NE_ZETA,"ζ")
-		SUC(NE_BETA,"β")
-		SUC(NE_MU,"μ")
-		SUC(NE_RHO2,"ϱ")
-		SUC(NE_THET2,"ϑ")
-		SUC(NE_THET,"θ")
-		SUC(SECURE_SPACE," ")//(U+00A0 NO-BREAK SPACE)//layer 5 end
-		SUC(NE_CAP_XI,"Ξ")//layer 6: math keycodes
-		SUC(NE_SQRT,"√")
-		SUC(NE_CAP_LAMBDA,"Λ")
-		SUC(NE_COMPLEX,"ℂ")
-		SUC(NE_CAP_OMEGA,"Ω")
-		SUC(NE_CROSS_PROD,"⨯")
-		SUC(NE_CAP_PSI,"Ψ")
-		SUC(NE_CAP_GAM,"Γ")
-		SUC(NE_CAP_PHI,"Φ")
-		SUC(NE_FRAC_NUM,"ℚ")
-		SUC(NE_SUBSETOF,"⊂")
-		SUC(NE_INTEGRAL,"∫")
-		SUC(NE_FORALL,"∀")
-		SUC(NE_EXIST,"∃")
-		SUC(NE_NAT_NUM,"ℕ")
-		SUC(NE_REAL_NUM,"ℝ")
-		SUC(NE_PARTIAL,"∂")
-		SUC(NE_CAP_DELTA, "Δ")
-		SUC(NE_NABLA, "∇")
-		SUC(NE_UNION,"∪")
-		SUC(NE_INTERSECTION,"∩")
-		SUC(NE_ALEPH,"ℵ")
-		SUC(NE_CAP_PI,"Π")
-		SUC(NE_DBL_BAR_Z,"ℤ")
-		SUC(NE_LONG_DBL_ARR_LE,"⇐")
-		SUC(NE_LE_RI_ARR,"⇔")
-		SUC(NE_LONG_DBL_ARR_RI,"⇒")
-		SUC(NE_LONG_ARR_RI, "↦")
-		SUC(NE_CAP_THETA,"Θ")
-		SUC(NE_NOT,"¬")
-		SUC(NE_OR,"∨")
-		SUC(NE_AND,"∧")
-		SUC(NE_ORTHO,"⊥")
-		SUC(NE_ANGLE,"∡")
-		SUC(NE_SOFT_HYPHEN,"")
-		SUC(NE_PARALLEL,"∥")
-		SUC(NE_ARROW_RI,"→")
-		SUC(NE_INFINITY,"∞")
-		SUC(NE_PROPTO,"∝")
-		SUC(NE_EMPTY_SET,"∅")
-		SUC(NE_IN_SET,"∈")
-		SUC(NE_CAP_SIGMA,"∑")
+	SUC(NE_OMCR,"ο")
+	SUC(NE_SIGM,"σ")
+	SUC(NE_NU,"ν")
+	SUC(NE_RHO,"ρ")
+	SUC(NE_TAU,"τ")
+	SUC(NE_DELT,"δ")
+	SUC(NE_NU2,"υ")
+	SUC(NE_EPSL2,"")
+	SUC(NE_ETA,"η")
+	SUC(NE_PI,"π")
+	SUC(NE_ZETA,"ζ")
+	SUC(NE_BETA,"β")
+	SUC(NE_MU,"μ")
+	SUC(NE_RHO2,"ϱ")
+	SUC(NE_THET2,"ϑ")
+	SUC(NE_THET,"θ")
+	SUC(SECURE_SPACE," ")//(U+00A0 NO-BREAK SPACE)//layer 5 end
+	SUC(NE_CAP_XI,"Ξ")//layer 6: math keycodes
+	SUC(NE_SQRT,"√")
+	SUC(NE_CAP_LAMBDA,"Λ")
+	SUC(NE_COMPLEX,"ℂ")
+	SUC(NE_CAP_OMEGA,"Ω")
+	SUC(NE_CROSS_PROD,"⨯")
+	SUC(NE_CAP_PSI,"Ψ")
+	SUC(NE_CAP_GAM,"Γ")
+	SUC(NE_CAP_PHI,"Φ")
+	SUC(NE_FRAC_NUM,"ℚ")
+	SUC(NE_SUBSETOF,"⊂")
+	SUC(NE_INTEGRAL,"∫")
+	SUC(NE_FORALL,"∀")
+	SUC(NE_EXIST,"∃")
+	SUC(NE_NAT_NUM,"ℕ")
+	SUC(NE_REAL_NUM,"ℝ")
+	SUC(NE_PARTIAL,"∂")
+	SUC(NE_CAP_DELTA, "Δ")
+	SUC(NE_NABLA, "∇")
+	SUC(NE_UNION,"∪")
+	SUC(NE_INTERSECTION,"∩")
+	SUC(NE_ALEPH,"ℵ")
+	SUC(NE_CAP_PI,"Π")
+	SUC(NE_DBL_BAR_Z,"ℤ")
+	SUC(NE_LONG_DBL_ARR_LE,"⇐")
+	SUC(NE_LE_RI_ARR,"⇔")
+	SUC(NE_LONG_DBL_ARR_RI,"⇒")
+	SUC(NE_LONG_ARR_RI, "↦")
+	SUC(NE_CAP_THETA,"Θ")
+	SUC(NE_NOT,"¬")
+	SUC(NE_OR,"∨")
+	SUC(NE_AND,"∧")
+	SUC(NE_ORTHO,"⊥")
+	SUC(NE_ANGLE,"∡")
+	SUC(NE_SOFT_HYPHEN,"")
+	SUC(NE_PARALLEL,"∥")
+	SUC(NE_ARROW_RI,"→")
+	SUC(NE_INFINITY,"∞")
+	SUC(NE_PROPTO,"∝")
+	SUC(NE_EMPTY_SET,"∅")
+	SUC(NE_IN_SET,"∈")
+	SUC(NE_CAP_SIGMA,"∑")
     SUC(SECURE_SPACE_NARROW," ")//(U+202F NARROW NO-BREAK SPACE)
-		SUC(NE_CIRC,"°")
+	SUC(NE_CIRC,"°")
     case RGB_SLD:
-      if (record->event.pressed) {
-        rgblight_mode(1);
-      }
-		case CSTM_CTRL_MODE_TOG:
-			if (record->event.pressed) {
-				if (ctrl_mode == true) {
-					ctrl_mode = false;
-					send_string("Mac\n");
-					break;
-				}
+        if (record->event.pressed) {
+            rgblight_mode(1);
+        }
+        // TODO? Fix unintended fallthrough
+	case CSTM_CTRL_MODE_TOG:
+		if (record->event.pressed) {
+			if (ctrl_mode == true) {
+				ctrl_mode = false;
+				send_string("Mac\n");
+				break;
+			}
 
-				if (ctrl_mode == false) {
-					ctrl_mode = true;
-					send_string("Lnx\n");
-					break;
-				}
+			if (ctrl_mode == false) {
+				ctrl_mode = true;
+				send_string("Lnx\n");
+				break;
 			}
-			case PLY_IMPR:
-			if (record->event.pressed) {
-				PLAY_SONG(music_impr);
-			}
-			break;
-			case PLY_FF:
-			if (record->event.pressed) {
-				PLAY_SONG(music_vic);
-			}
-			break;
-			return false;
 		}
+        // TODO? rather break here
+	case PLY_IMPR:
+		if (record->event.pressed) {
+			PLAY_SONG(music_impr);
+		}
+		break;
+	case PLY_FF:
+		if (record->event.pressed) {
+			PLAY_SONG(music_vic);
+		}
+		break;
+	return false;
+  }
   return true;
 }
 
@@ -779,7 +775,7 @@ void dance_2_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[2].step = dance_step(state);
     switch (dance_state[2].step) {
         case SINGLE_TAP: register_code16(KC_2); break;
-	case SINGLE_HOLD: register_code16(S(ALGR(US_S))); break;
+        case SINGLE_HOLD: register_code16(S(ALGR(US_S))); break;
         case DOUBLE_TAP: register_code16(KC_2); register_code16(KC_2); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_2); register_code16(KC_2);
     }
@@ -789,7 +785,7 @@ void dance_2_reset(qk_tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[2].step) {
         case SINGLE_TAP: unregister_code16(KC_2); break;
-	case SINGLE_HOLD: unregister_code16(S(ALGR(US_S))); break;
+        case SINGLE_HOLD: unregister_code16(S(ALGR(US_S))); break;
         case DOUBLE_TAP: unregister_code16(KC_2); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_2); break;
     }
@@ -814,7 +810,7 @@ void dance_3_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[3].step = dance_step(state);
     switch (dance_state[3].step) {
         case SINGLE_TAP: register_code16(KC_3); break;
-				case SINGLE_HOLD: send_unicode_string("ℓ"); break;
+        case SINGLE_HOLD: send_unicode_string("ℓ"); break;
         case DOUBLE_TAP: register_code16(KC_3); register_code16(KC_3); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_3); register_code16(KC_3);
     }
@@ -824,7 +820,7 @@ void dance_3_reset(qk_tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[3].step) {
         case SINGLE_TAP: unregister_code16(KC_3); break;
-	case SINGLE_HOLD: unregister_code16(NE_SCRIPT_L); break;
+        case SINGLE_HOLD: unregister_code16(NE_SCRIPT_L); break;
         case DOUBLE_TAP: unregister_code16(KC_3); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_3); break;
     }
@@ -848,20 +844,20 @@ void on_dance_4(qk_tap_dance_state_t *state, void *user_data) {
 void dance_4_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[4].step = dance_step(state);
     switch (dance_state[4].step) {
-	case SINGLE_TAP: register_code16(KC_4); break;
-	case SINGLE_HOLD: send_unicode_string("»"); break;
-	case DOUBLE_TAP: register_code16(KC_4); register_code16(KC_4); break;
-	case DOUBLE_SINGLE_TAP: tap_code16(KC_4); register_code16(KC_4);
+        case SINGLE_TAP: register_code16(KC_4); break;
+        case SINGLE_HOLD: send_unicode_string("»"); break;
+        case DOUBLE_TAP: register_code16(KC_4); register_code16(KC_4); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_4); register_code16(KC_4);
     }
 }
 
 void dance_4_reset(qk_tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[4].step) {
-	case SINGLE_TAP: unregister_code16(KC_4); break;
-	case SINGLE_HOLD: unregister_code16(NE_LEFT_GUILLEMET); break;
-	case DOUBLE_TAP: unregister_code16(KC_4); break;
-	case DOUBLE_SINGLE_TAP: unregister_code16(KC_4);
+        case SINGLE_TAP: unregister_code16(KC_4); break;
+        case SINGLE_HOLD: unregister_code16(NE_LEFT_GUILLEMET); break;
+        case DOUBLE_TAP: unregister_code16(KC_4); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_4);
     }
     dance_state[4].step = 0;
 }
@@ -884,7 +880,7 @@ void dance_5_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[5].step = dance_step(state);
     switch (dance_state[5].step) {
         case SINGLE_TAP: register_code16(KC_5); break;
-				case SINGLE_HOLD: send_unicode_string("«"); break;
+        case SINGLE_HOLD: send_unicode_string("«"); break;
         case DOUBLE_TAP: register_code16(KC_5); register_code16(KC_5); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_5); register_code16(KC_5);
     }
@@ -894,7 +890,7 @@ void dance_5_reset(qk_tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[5].step) {
         case SINGLE_TAP: unregister_code16(KC_5); break;
-	case SINGLE_HOLD: unregister_code16(NE_RIGHT_GUILLEMET); break;
+        case SINGLE_HOLD: unregister_code16(NE_RIGHT_GUILLEMET); break;
         case DOUBLE_TAP: unregister_code16(KC_5); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_5); break;
     }
@@ -999,7 +995,7 @@ void dance_8_finished(qk_tap_dance_state_t *state, void *user_data) {
         case SINGLE_HOLD: register_code16(LSFT(KC_C)); break;
         case DOUBLE_TAP:  send_ctrl_string(ctrl_mode, KC_C); break;
         //case DOUBLE_HOLD: send_ctrl_string(ctrl_mode, KC_C)); break;
-				case DOUBLE_SINGLE_TAP: tap_code16(KC_C); register_code16(KC_C);
+		case DOUBLE_SINGLE_TAP: tap_code16(KC_C); register_code16(KC_C);
     }
 }
 
@@ -1247,7 +1243,7 @@ void dance_15_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[15].step = dance_step(state);
     switch (dance_state[15].step) {
         case SINGLE_TAP: register_code16(KC_9); break;
-				case SINGLE_HOLD: send_unicode_string("“"); break;
+		case SINGLE_HOLD: send_unicode_string("“"); break;
         case DOUBLE_TAP: register_code16(KC_9); register_code16(KC_9); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_9); register_code16(KC_9);
     }
@@ -1572,11 +1568,11 @@ qk_tap_dance_action_t tap_dance_actions[] = {
         [DANCE_15] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_15, dance_15_finished, dance_15_reset),
         [DANCE_16] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_16, dance_16_finished, dance_16_reset),
         [DANCE_17] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_17, dance_17_finished, dance_17_reset),
-				[DANCE_18] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_18, dance_18_finished, dance_18_reset),
+		[DANCE_18] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_18, dance_18_finished, dance_18_reset),
         [DANCE_LS_MO5] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_ls_mo5, dance_ls_mo5_finished, dance_ls_mo5_reset),
-				[DANCE_NE_AE] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_ne_ae, dance_ne_ae_finished, dance_ne_ae_reset),
-				[DANCE_NE_OE] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_ne_oe, dance_ne_oe_finished, dance_ne_oe_reset),
-				[DANCE_NE_UE] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_ne_ue, dance_ne_ue_finished, dance_ne_ue_reset),
-				[DANCE_LB_MO3] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_lb_mo3, dance_lb_mo3_finished, dance_lb_mo3_reset),
-				[DANCE_RB_MO4] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_rb_mo4, dance_rb_mo4_finished, dance_rb_mo4_reset),
+		[DANCE_NE_AE] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_ne_ae, dance_ne_ae_finished, dance_ne_ae_reset),
+		[DANCE_NE_OE] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_ne_oe, dance_ne_oe_finished, dance_ne_oe_reset),
+		[DANCE_NE_UE] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_ne_ue, dance_ne_ue_finished, dance_ne_ue_reset),
+		[DANCE_LB_MO3] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_lb_mo3, dance_lb_mo3_finished, dance_lb_mo3_reset),
+		[DANCE_RB_MO4] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_rb_mo4, dance_rb_mo4_finished, dance_rb_mo4_reset),
 };
