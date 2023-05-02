@@ -620,26 +620,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	SUC(NE_CAP_SIGMA,"∑")
     SUC(SECURE_SPACE_NARROW," ")//(U+202F NARROW NO-BREAK SPACE)
 	SUC(NE_CIRC,"°")
-    case RGB_SLD:
-        if (record->event.pressed) {
-            rgblight_mode(1);
-        }
-        // TODO? Fix unintended fallthrough
 	case CSTM_CTRL_MODE_TOG:
 		if (record->event.pressed) {
 			if (ctrl_mode == true) {
 				ctrl_mode = false;
 				send_string("Mac\n");
-				break;
 			}
 
 			if (ctrl_mode == false) {
 				ctrl_mode = true;
 				send_string("Lnx\n");
-				break;
 			}
 		}
-        // TODO? rather break here
+        break;
 	case PLY_IMPR:
 		if (record->event.pressed) {
 			PLAY_SONG(music_impr);
@@ -650,7 +643,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 			PLAY_SONG(music_vic);
 		}
 		break;
-	return false;
+    case RGB_SLD:
+        // unsure why this guard was removed
+        //if (rawhid_state.rgb_control) {
+        //    return false;
+        //}
+        if (record->event.pressed) {
+            rgblight_mode(1);
+        }
+        return false;
   }
   return true;
 }
